@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Cloud File Vault</title>
+</head>
+
+<body>
+
+<h2>Secure Cloud File Vault</h2>
+
+{% if user.is_authenticated %}
+<p>
+Logged in as {{ user.username }}
+
+<a href="{% url 'files' %}">Files</a>
+
+<a href="{% url 'upload' %}">Upload</a>
+
+<a href="{% url 'logout' %}">Logout</a>
+</p>
+{% endif %}
+
+<hr>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
